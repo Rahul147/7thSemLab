@@ -1,0 +1,41 @@
+<!--
+1. Develop and demonstrate a XHTML file that includes Javascript script
+for the following problems:
+a) Input: A number n obtained using prompt
+-->
+
+
+<!DOCTYPE>
+
+<html>
+
+<head>
+	<title>1a</title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+
+		var n = prompt("Enter the value of n");
+		var first = 0, second = 1;
+		var third;
+		if(n < 1) {
+			alert("Sorry enter a value greater >=2 ");
+			location.reload();
+		} else {		
+			document.write(first + "<br />" + second + "<br/ >");
+				for(var i = 2; i < n; i++) {
+					third = first + second;
+					first = second;
+					second = third;
+					document.write(third + "<br />");
+				}
+		}
+
+	</script>
+
+</body>	
+
+
+</html>

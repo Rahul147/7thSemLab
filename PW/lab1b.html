@@ -1,0 +1,37 @@
+<!--
+1. Develop and demonstrate a XHTML file that includes Javascript script
+for the following problems:
+b) Input: A number n obtained using prompt
+Output: A table of numbers from 1 to n and their squares using alert
+-->
+
+<!DOCTYPE>
+
+<html>
+
+<head>
+	<title>1b</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var n = prompt("Enter the value of n");
+		var arr = new Array();
+		var ans = new Array();
+		document.write("<div id = \"val\" style = \"display: none;\">");
+		
+		for (var i = 1; i <= n; i++) {
+			
+			document.write(i + "*" + i + "=" + (i*i) + "\n");
+			
+		}
+		
+		document.write("</div>");
+		alert(val.innerHTML);
+	</script>
+
+	
+
+</body>
+
+<html>
