@@ -1,0 +1,38 @@
+<!--
+2. a) Develop and demonstrate, using Javascript script, a XHTML document
+that collects the USN ( the valid format is: A digit from 1 to 4 followed
+by two upper-case characters followed by two digits followed by two
+upper-case characters followed by three digits; no embedded spaces
+allowed) of the user. Event handler must be included for the form
+element that collects this information to validate the input. Messages in
+the alert windows must be produced when errors are detected. 
+-->
+
+<!DOCTYPE>
+
+<html>
+
+	<head>
+		<title>2a</title>
+	</head>	
+
+	<body>
+		<script type="text/javascript">
+			function ValidateUsn() {
+				var usn = document.getElementById('usn').value;
+				if(usn.match(/[1-4][A-Z][A-Z][0-1][1-9][A-Z][A-Z][0-9][0-9][0-9]/)) {
+					alert("The Entered USN is valid");
+				} else {
+					alert("Wrong USN yo!");
+				}
+			}
+		</script>
+
+		<form>
+			USN:<input id = "usn">
+			<button onclick = "ValidateUsn();">ValidateUsn!</button>
+		</form>
+
+	</body>
+
+</html>

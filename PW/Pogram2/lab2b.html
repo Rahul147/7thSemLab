@@ -1,0 +1,37 @@
+<!--
+2. b) Modify the above program to get the current semester also (restricted
+to be a number from 1 to 8)
+-->
+
+<!DOCTYPE>
+
+<html>
+
+	<head>
+		<title>2a</title>
+	</head>	
+
+	<body>
+		<script type="text/javascript">
+			function ValidateUsn() {
+				var usn = document.getElementById('usn').value;
+				(usn.match(/^[1-4][A-Z][A-Z][0-1][1-9][A-Z][A-Z][0-9][0-9][0-9]$/))? alert("USN perfecto") : alert("invalid USN");
+				ValidateSem();
+			}
+
+			function ValidateSem() {
+				var sem = document.getElementById('sem').value;
+				(sem.match(/^[1-8]$/))? alert("SEM perfecto") : alert("invalid SEM");
+			}
+
+		</script>
+
+		<form>
+			USN:<input id = "usn"><br /><br />
+			SEM:<input id = "sem"><br /><br />
+			<button onclick = "ValidateUsn();">ValidateUsn!</button>
+		</form>
+
+	</body>
+
+</html>
